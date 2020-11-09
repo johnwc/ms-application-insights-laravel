@@ -31,22 +31,17 @@ class MSApplicationInsightsExceptionHandler extends ExceptionHandler
      *
      * @param  \Exception $e
      *
-     * @return mixed
+     * @return void
      *
      * @throws Exception
      */
     public function report(\Throwable $e)
     {
-        foreach ($this->dontReport as $type)
-        {
-            if ($e instanceof $type)
-            {
-                return parent::report($e);
-            }
+        if ($this->shouldntReport($e)) {
+            return;
         }
 
         $this->msApplicationInsightsHelpers->trackException($e);
-
-        return parent::report($e);
+        parent::report($e);
     }
 }

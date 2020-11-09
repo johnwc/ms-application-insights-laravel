@@ -130,6 +130,12 @@ See the [ApplicationInsights-PHP](https://github.com/Microsoft/ApplicationInsigh
 
 ## Version History
 
+### 0.2.5
+- Changed to use azure/application-insights package rather than abandoned microsoft/application-insights
+- Updated to support laravel/framework v5-v8
+- Updated MSApplicationInsightsExceptionHandler@report to use shouldntReport()
+- Update Application Insights JavaScript snippet to v3
+
 ### 0.2.4
 - Added try/catch blocks when flushing data to prevent RequestExceptions from killing the application if there is a problem connecting to Application Insights.
 
