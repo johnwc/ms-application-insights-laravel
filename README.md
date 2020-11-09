@@ -1,4 +1,4 @@
-# Microsoft Application Insights for Laravel 5
+# Microsoft Application Insights for Laravel
 
 A simple Laravel implementation for [Microsoft Application Insights](http://azure.microsoft.com/en-gb/services/application-insights/)
 
